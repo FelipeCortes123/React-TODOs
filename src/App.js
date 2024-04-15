@@ -3,6 +3,7 @@ import { TodoSearch } from './TodoSearch';
 import { TodoList } from './TodoList';
 import { TdoItem } from './TodoItem';
 import { CreateTodo } from './CreateTodo';
+import React from 'react';
 import './App.css';
 const defaultTodos = [
 {
@@ -19,11 +20,22 @@ const defaultTodos = [
 },
 ];
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos)
+  // esto se hace en app ya que es el componente padre y asi pasamos propiedades de componentes padres a hijos
+  const [searchValue, setValueSearch] = React.useState('');
+
+
+
+  console.log('Buscas' + searchValue)
+
   return (
      <> 
      {/* <React.Fragment></React.Fragment> esto se puede para renderizar o dejarlas vacias como esta ahora mismo */}
       <TodoCounter completed={15} total={25} />
-      <TodoSearch />
+      <TodoSearch
+        searchValue={searchValue}
+        setValueSearch={setValueSearch}
+      />
 
       <TodoList>
         {defaultTodos.map(todo => (

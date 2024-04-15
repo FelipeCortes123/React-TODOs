@@ -1,7 +1,6 @@
 import React from 'react'
 import './TodoSearch.css'
-function TodoSearch() {
-  const [searchValue, setValueSearch] = React.useState('');
+function TodoSearch({ searchValue, setValueSearch}) {
   // Valor inicial del userstate('vacio') o pasar parametros si es necesario 
     return (
       <input className='TodoSearch' placeholder="Cortar la Cebolla"
