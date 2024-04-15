@@ -1,0 +1,11 @@
+.titulo {
+    font-size : 30px;
+    color: rgb(0, 0, 0);
+    text-align : center;
+    margin : 0;
+    padding : 48px;
+    background-color: rgb(62, 82, 229);
+}
+.titulo.span{
+    font-weight: bold;
+}
